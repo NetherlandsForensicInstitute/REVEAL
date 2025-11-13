@@ -9,7 +9,7 @@ import time
 import random
 from PIL import Image
 from filehash import FileHash
-from creation.utils import average_hue, complexity, PIL_to_opencv, motion_blur
+from utils import average_hue, complexity, PIL_to_opencv, motion_blur
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 Image.MAX_IMAGE_PIXELS = None

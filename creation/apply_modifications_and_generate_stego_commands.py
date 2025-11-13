@@ -288,7 +288,7 @@ if __name__ == '__main__':
         type=str
     )
     parser.add_argument(
-        '-o',
+        '-or',
         '--original-picture-dir',
         help='A path to the directory containing the original pictures.',
         required=True,

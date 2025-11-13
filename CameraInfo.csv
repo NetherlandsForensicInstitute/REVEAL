@@ -1,0 +1,59 @@
+Make,Model,Year,Resolution (MP),HDR,Source,Version,File Type
+Asus,Zenfone 8_back,2021,64,AutoHDR,,Android 11,jpg
+Asus,Zenfone 9_back,2022,50,,,Android 12,jpg
+Asus,Zenfone 9_front,2022,12,,,Android 12,jpg
+BlackBerry,Curve 9360 #1_back,2011,5,,,Version 7.1,jpg
+Huawei,EML-L09_back,2018,24,No,,Android 9,jpg
+Huawei,P20_back,2018,12,,,Android 8,jpg
+Huawei,P20_front,2018,24,,,Android 8,jpg
+Apple,iPhone 5S_back,2013,8,,,IOS 12.2,jpg
+Apple,iPhone 5S_front,2013,1.2,,,IOS 12.2,jpg
+Apple,iPhone 6S_back,2015,12,,,IOS 13.3.1,jpg
+Apple,iPhone 6S_front,2015,5,,,IOS 13.3.1,jpg
+Apple,iPhone SE #1_back,2017,12,,,IOS 13.5.1,jpg
+Apple,iPhone SE #1_front,2017,1.2,,,IOS 13.5.1,jpg
+Apple,iPhone SE #2_back,2017,12,,,IOS 14.0.1,jpg
+Apple,iPhone SE #2_front,2017,1.2,,,IOS 14.0.1,jpg
+Apple,iPod Touch 2010_back,2010,0.7,,,IOS 6.1.6,jpg
+Apple,iPod Touch 2010_front,2010,0.3,,,IOS 6.1.6,jpg
+Apple,iPod Touch 2014_back,2014,5,,,IOS 9.3.5,jpg
+Apple,iPod Touch 2014_front,2014,1.2,,,IOS 9.3.5,jpg
+Nikon,D3200 #1,2012,24.2,,,,jpg
+Nikon,D3200 #2,2012,24.2,,,,jpg
+Oneplus,Nord CE 5G_back,2021,64,No,,Android 11,jpg
+Oneplus,Nord CE 5G_front,2021,16,,,Android 11,jpg
+Oppo,Find X3 Lite_back,2021,64,HDR,,Android 12,jpg
+Oppo,Find X3 Lite_front,2021,32,,,Android 12,jpg
+Oppo,Find X3 Neo_back,2021,50,AutoHDR,,Android 12,jpg
+Oppo,Find X3 Neo_front,2021,32,,,Android 12,jpg
+Samsung,Galaxy A20e_back,2019,13,,,Android 11,jpg
+Samsung,Galaxy A20e_front,2019,8,,,Android 11,jpg
+Samsung,Galaxy A32_back,2021,64,HDR,,Android 11,jpg
+Samsung,Galaxy A32_front,2021,20,,,Android 11,jpg
+Samsung,Galaxy A50_back,2019,25,,,Android 11,jpg
+Samsung,Galaxy A50_front,2019,25,,,Android 11,jpg
+Samsung,Galaxy Ace_back,2011,5,,,Android ,jpg
+Samsung,Galaxy Grand Plus_back,2015,5,,,Android 4..4.4,jpg
+Samsung,Galaxy Grand Plus_front,2015,0.3,,,Android 4..4.4,jpg
+Samsung,Galaxy S3 mini #9_back,2013,5,,,,jpg
+Samsung,Galaxy S3 mini #9_front,2013,0.3,,,,jpg
+Samsung,Galaxy S6 edge_back,2015,16,,,Android 7,jpg
+Samsung,Galaxy S6 edge_front,2015,5,,,Android 7,jpg
+Samsung,NX1000 #1,2012,20.3,,,nvt,jpg
+Samsung,NX1000 #2,2012,20.3,,,nvt,jpg
+Samsung,NX1000 #3,2012,20.3,,,nvt,jpg
+Samsung,Xcover Pro_back,2020,25,HDR,,Android 12,jpg
+Samsung,Xcover Pro_front,2020,13,,,Android 12,jpg
+Sony,Xperia 1 III_back,2021,12,No,,Android 12,jpg
+Sony,Xperia 1 IV_back,2022,12,,,Android 12,jpg
+Sony,Xperia 1 IV_front,2022,12,,,Android 12,jpg
+Xiaomi,Mi 11i_back,2021,108,HDR,,Android 12,jpg
+Xiaomi,Poco F3_back,2021,48,HDR,,Android 12,jpg
+Xiaomi,Poco F3_front,2021,20,,,Android 12,jpg
+Stable Diffusion,dpm2,2022,0.26,, https://github.com/AUTOMATIC1111/stable-diffusion-webui/tree/ada901ed661a717c44281d640b8fc0a275d4cb48,V1.4,png
+Stable Diffusion,Euler a,2022,0.26,, https://github.com/AUTOMATIC1111/stable-diffusion-webui/tree/ada901ed661a717c44281d640b8fc0a275d4cb49,V1.4,png
+Stable Diffusion,heun,2022,0.26,, https://github.com/AUTOMATIC1111/stable-diffusion-webui/tree/ada901ed661a717c44281d640b8fc0a275d4cb50,V1.4,png
+Stable Diffusion,euler,2022,0.26,, https://github.com/AUTOMATIC1111/stable-diffusion-webui/tree/ada901ed661a717c44281d640b8fc0a275d4cb51,V1.4,png
+Stable Diffusion,lms,2022,0.26,, https://github.com/AUTOMATIC1111/stable-diffusion-webui/tree/ada901ed661a717c44281d640b8fc0a275d4cb52,V1.4,png
+Stable Diffusion,DDIM,2022,0.26,, https://github.com/AUTOMATIC1111/stable-diffusion-webui/tree/ada901ed661a717c44281d640b8fc0a275d4cb53,V1.4,png
+Apple,iPhone 14 Pro Max_back,2022,48,,,IOS 16.0.2,jpg
