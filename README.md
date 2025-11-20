@@ -10,7 +10,7 @@ The dataset can be found here https://doi.org/10.17026/PT/DITX0A.
 The paper can be found here https://doi.org/10.1016/j.fsidi.2025.302006.
 
 [!NOTE]
-The dataset is currently still being uploaded, if you want access in the meantime please request it via ...
+The dataset is currently still being uploaded.
 
 ## Dataset Creation
 
