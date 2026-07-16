@@ -14,7 +14,6 @@ from utils import average_hue, complexity, PIL_to_opencv, motion_blur
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 Image.MAX_IMAGE_PIXELS = None
 SECOND_MONITOR_WIDTH = 3840
-SUDO_PASSWORD = "123stagiair!"
 MD5HASHER = FileHash('md5')
 
 modifications = {
