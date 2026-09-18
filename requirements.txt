@@ -14,4 +14,4 @@ atpbar==2.0.0
 scikit-image==0.25.1
 torch==2.5.1
 torchvision==0.20.1
-exifread==
+exifread==3.0.0
