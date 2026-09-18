@@ -8,13 +8,26 @@ import subprocess
 import time
 import random
 from PIL import Image
-from filehash import FileHash
+import hashlib
 from utils import average_hue, complexity, PIL_to_opencv, motion_blur
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 Image.MAX_IMAGE_PIXELS = None
 SECOND_MONITOR_WIDTH = 3840
-MD5HASHER = FileHash('md5')
+
+
+def sha256_file(path: str) -> str:
+    """SHA256 of a file, read in chunks so large pictures do not load whole.
+
+    SHA256 rather than MD5: these digests are used to assert that every
+    picture in the dataset is unique, and MD5 collisions are practical.
+    """
+    digest = hashlib.sha256()
+    with open(path, 'rb') as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b''):
+            digest.update(block)
+    return digest.hexdigest()
+
 
 modifications = {
     "no modifications" : ["no modifications", 0.35],
@@ -263,7 +276,7 @@ def apply_modifications(original_picture_path, index, picture_name, modification
         dataset_master_file.loc[index, 'modifications'] = modifications
         dataset_master_file.loc[index, 'modifiedPictureComplexity'] = complexity(PIL_to_opencv(modified_picture_path))
         dataset_master_file.loc[index, 'modifiedPictureAvgHue'] = average_hue(PIL_to_opencv(modified_picture_path))
-        dataset_master_file.loc[index, 'modifiedPictureHash'] = MD5HASHER.hash_file(modified_picture_path)
+        dataset_master_file.loc[index, 'modifiedPictureHash'] = sha256_file(modified_picture_path)
         dataset_master_file.loc[index, 'modifiedPictureNrOfColourChannels'] = get_nr_of_colour_channels(Image.open(modified_picture_path))
         dataset_master_file.loc[index, 'modifiedPictureWidth'] = Image.open(modified_picture_path).size[0]
         dataset_master_file.loc[index, 'modifiedPictureHeight'] =  Image.open(modified_picture_path).size[1]
