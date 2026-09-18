@@ -1,9 +1,8 @@
 import os.path
 import pandas as pd
 from tqdm import tqdm
-from filehash import FileHash
 from utils import *
-from modifications import get_nr_of_colour_channels
+from modifications import get_nr_of_colour_channels, sha256_file
 import argparse
 
 
@@ -20,7 +19,6 @@ def main(dataset_master_file: str,
     dataset = pd.read_csv(dataset_master_file)
 
     # Calculate hashes of stego pictures if not yet filled in
-    MD5Hasher = FileHash("md5")
 
     # Temporarily add helper column
     dataset['modifiedPictureInteger'] = (
@@ -48,7 +46,7 @@ def main(dataset_master_file: str,
             try:
                 picture = Image.open(pic)
                 opencv_pic = PIL_to_opencv(pic)
-                dataset.loc[index, 'stegoPictureHash'] = MD5Hasher.hash_file(pic)
+                dataset.loc[index, 'stegoPictureHash'] = sha256_file(pic)
                 dataset.loc[index, 'stegoPictureNrOfColourChannels'] = get_nr_of_colour_channels(picture)
                 dataset.loc[index, 'stegoPictureComplexity'] = complexity(opencv_pic)
                 width, height = picture.size
@@ -76,7 +74,7 @@ def main(dataset_master_file: str,
                 pic_path = os.path.join(modified_picture_dir, row['modifiedPictureName'])
                 picture = Image.open(pic_path)
                 opencv_pic = PIL_to_opencv(pic_path)
-                dataset.loc[index, 'modifiedPictureHash'] = MD5Hasher.hash_file(pic_path)
+                dataset.loc[index, 'modifiedPictureHash'] = sha256_file(pic_path)
                 dataset.loc[index, 'modifiedPictureComplexity'] = complexity(opencv_pic)
                 dataset.loc[index, 'modifiedPictureNrOfColourChannels'] = get_nr_of_colour_channels(picture)
                 width, height = picture.size
@@ -91,7 +89,7 @@ def main(dataset_master_file: str,
     for index, row in dataset.iterrows():
         if pd.isna(dataset.loc[index, 'originalPictureHash']):
             pic_path = os.path.join(original_picture_dir, row['camera'], row['originalPictureName'])
-            dataset.loc[index, 'originalPictureHash'] = MD5Hasher.hash_file(pic_path)
+            dataset.loc[index, 'originalPictureHash'] = sha256_file(pic_path)
         pbar.update(1)
 
     # Recalculate original picture complexities and avg hues

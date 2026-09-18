@@ -7,7 +7,6 @@ import random
 from datetime import datetime
 from atpbar import atpbar
 import modifications
-from filehash import FileHash
 from utils import average_hue, complexity, motion_blur
 import math
 import argparse
@@ -46,7 +45,6 @@ def read_images_in_dataframe(image_folder):
 def read_images_from_camera(picture_dir, camera_folder):
     images_list = []
     images = [x for x in os.listdir(os.path.join(picture_dir, camera_folder))]
-    md5hasher = FileHash('md5')
     for image in atpbar(images, name=camera_folder):
         try:
             # Default values to change later
@@ -70,7 +68,7 @@ def read_images_from_camera(picture_dir, camera_folder):
             camera = camera_folder.split('/')[-1]
 
             # Calculate original image hash
-            img_hash = md5hasher.hash_file(os.path.join(picture_dir, camera_folder, image))
+            img_hash = modifications.sha256_file(os.path.join(picture_dir, camera_folder, image))
 
             # Filesize
             fs = os.path.getsize(os.path.join(picture_dir, camera_folder, image))
